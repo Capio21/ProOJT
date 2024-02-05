@@ -331,7 +331,7 @@
     </div>
     
     <div class="image-section">
-        <img src="https://o.remove.bg/downloads/9f51c24b-49f1-44a8-bebe-939c1881d74a/d947efb9-a1e4-44e4-a961-40c53dd35aa8-removebg-preview.png" alt="Course Image">
+        <img src="../../coconut.png">
     </div>
 </div>
 
