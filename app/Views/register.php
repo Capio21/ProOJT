@@ -60,7 +60,7 @@
                     </li>
                     <li class="nav-item active"><a class="nav-link" title="View Website" href="/Landing"><i
                                 class="bi bi-globe"></i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="login"><i class="bi bi-box-arrow-right"></i>Logout</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/" data-toggle="modal" data-target="#logoutModal"><i class="bi bi-box-arrow-right"></i>Logout</a></li>
                 </ul>
             </div>
         </div>
@@ -77,10 +77,11 @@
                 </div>
 
                 <ul class="nav flex-column side-bar">
+
                     <li class="nav-item side-bar tmargin"><a class="nav-link" href="/admin"><i
                                 class="bi bi-house"></i>&nbsp;Dashboard</a></li>
-                    <li class="nav-item side-bar"><a class="nav-link" href="#"><i
-                                class="bi bi-flag"></i>&nbsp;Add Member </a></li>
+                    <li class="nav-item side-bar"><a class="nav-link" href="/members"><i
+                                class="bi bi-flag"></i>&nbsp; Member Master List </a></li>
                     <li class="nav-item side-bar"><a class="nav-link" href="#"><i
                                 class="bi bi-star"></i>&nbsp;Add Product</a></li>
                     <li class="nav-item side-bar"><a class="nav-link" href="#"><i
@@ -162,6 +163,26 @@
                     </tr>
                 </table>
             </main>
+        </div>
+    </div>
+
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">Logout Confirmation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to logout?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <a href="/" class="btn btn-primary">Logout</a>
+                </div>
+            </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

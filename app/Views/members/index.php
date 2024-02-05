@@ -76,8 +76,8 @@
 
                     <li class="nav-item side-bar tmargin"><a class="nav-link" href="/admin"><i
                                 class="bi bi-house"></i>&nbsp;Dashboard</a></li>
-                    <li class="nav-item side-bar"><a class="nav-link" href="/members"><i
-                                class="bi bi-flag"></i>&nbsp;Member Master List </a></li>
+                    <li class="nav-item side-bar"><a class="nav-link" href="/member"><i
+                                class="bi bi-flag"></i>&nbsp; Member Master List </a></li>
                     <li class="nav-item side-bar"><a class="nav-link" href="#"><i
                                 class="bi bi-star"></i>&nbsp;Add Product</a></li>
                     <li class="nav-item side-bar"><a class="nav-link" href="#"><i
@@ -99,35 +99,49 @@
                     <li class="breadcrumb-item"><i class="bi bi-house-door"></i>&nbsp;Home</li>
                     <li class="breadcrumb-item"><a href="#"><i class="bi bi-list"></i>Dashboard</a></li>
                 </ul>
-                <div class="container mt-5">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8">
-                            <h2>SYSTEM OVERALL INFORMATION</h2>
-                            <table class="table table-bordered table-sm">
-                                <thead>
-                                    <tr>
-                                        <th>Username</th>
-                                        <th>Email</th>
-                                        <!-- Add more columns as needed -->
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach ($users as $user): ?>
-                                        <tr>
-                                            <td><?= $user['username'] ?></td>
-                                            <td><?= $user['email'] ?></td>
-                                            <!-- Add more columns as needed -->
-                                        </tr>
-                                    <?php endforeach; ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </main>
-        </div>
-    </div>
 
+                <h2>Member List</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+        <th>ID</th>
+<th>Username</th>
+<th>Email</th>
+<th>Full Name</th>
+<th>Address</th>
+<th>Contact Number</th>
+<th>Date of Birth</th>
+<th>Gender</th>
+<th>Occupation</th>
+<th>Membership Type</th>
+<th>Date Joined</th>
+<th>Actions</th>
+            <!-- Add other fields as needed -->
+        </tr>
+    </thead>
+<!-- Assuming $members is an array of arrays -->
+<?php foreach ($members as $member): ?>
+<tr>
+    <td><?= $member['id'] ?></td>
+    <td><?= $member['username'] ?></td>
+    <td><?= $member['email'] ?></td>
+    <td><?= $member['full_name'] ?></td>
+    <td><?= $member['address'] ?></td>
+    <td><?= $member['contact_number'] ?></td>
+    <td><?= $member['date_of_birth'] ?></td>
+    <td><?= $member['gender'] ?></td>
+    <td><?= $member['occupation'] ?></td>
+    <td><?= $member['membership_type'] ?></td>
+    <td><?= $member['date_joined'] ?></td>
+    <!-- Add other fields as needed -->
+    <td><a href="/members/edit/<?= $member['id'] ?>">Edit</a></td>
+</tr>
+<?php endforeach; ?>
+
+</tr>
+
+               
     <!-- Logout Modal -->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">

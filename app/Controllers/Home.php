@@ -19,4 +19,8 @@ class Home extends BaseController
     {
         return view('Website');
     }
+    public function Success(): string
+    {
+        return view('Success');
+    }
 }

@@ -96,7 +96,7 @@
         <?= form_close() ?>
 
         <div id="signup-link">
-            <p>Not a member of the coop? <a href="/signup">Sign Up</a></p>
+            <p>Not a member of the coop? <a href="/members/create">Sign Up</a></p>
         </div>
     </div>
 </body>
