@@ -1,0 +1,12 @@
+CRITICAL - 2024-02-05 02:58:33 --> Undefined variable $users
+in APPPATH\Views\admin.php on line 123.
+ 1 APPPATH\Views\admin.php(123): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', 'C:\\laragon\\www\\ParaOJT\\app\\Views\\admin.php', 123)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\ParaOJT\\app\\Views\\admin.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin', [], true)
+ 5 APPPATH\Controllers\Home.php(13): view('admin')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ParaOJT\\public\\index.php')

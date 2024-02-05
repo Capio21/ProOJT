@@ -1,0 +1,136 @@
+CRITICAL - 2024-02-03 07:29:06 --> Call to undefined function form_open()
+in APPPATH\Views\login.php on line 23.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('login', [], true)
+ 4 APPPATH\Controllers\Auth.php(69): view('login', [])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->login()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ParaOJT\\public\\index.php')
+CRITICAL - 2024-02-03 07:29:56 --> Call to undefined function form_open()
+in APPPATH\Views\login.php on line 23.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('login', [], true)
+ 4 APPPATH\Controllers\Auth.php(69): view('login', [])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->login()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ParaOJT\\public\\index.php')
+ERROR - 2024-02-03 07:37:43 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: YES) in C:\laragon\www\ParaOJT\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ParaOJT\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', 'ProOJT', 3306, '', 0)
+#1 C:\laragon\www\ParaOJT\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ParaOJT\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ParaOJT\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ParaOJT\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ParaOJT\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', Array, NULL, 'username')
+#6 C:\laragon\www\ParaOJT\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', Array, Array)
+#7 C:\laragon\www\ParaOJT\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ParaOJT\app\Controllers\Auth.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ParaOJT\system\CodeIgniter.php(919): App\Controllers\Auth->register()
+#10 C:\laragon\www\ParaOJT\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\laragon\www\ParaOJT\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ParaOJT\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ParaOJT\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: YES) in C:\laragon\www\ParaOJT\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ParaOJT\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ParaOJT\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ParaOJT\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\laragon\www\ParaOJT\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ParaOJT\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', Array, NULL, 'username')
+#5 C:\laragon\www\ParaOJT\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', Array, Array)
+#6 C:\laragon\www\ParaOJT\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\laragon\www\ParaOJT\app\Controllers\Auth.php(24): CodeIgniter\Controller->validate(Array)
+#8 C:\laragon\www\ParaOJT\system\CodeIgniter.php(919): App\Controllers\Auth->register()
+#9 C:\laragon\www\ParaOJT\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\laragon\www\ParaOJT\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ParaOJT\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ParaOJT\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-02-03 07:37:43 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', [...], null, 'username')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Auth.php(24): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->register()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ParaOJT\\public\\index.php')
+ERROR - 2024-02-03 07:38:24 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: YES) in C:\laragon\www\ParaOJT\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ParaOJT\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', 'ProOJT', 3306, '', 0)
+#1 C:\laragon\www\ParaOJT\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ParaOJT\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ParaOJT\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ParaOJT\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ParaOJT\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', Array, NULL, 'username')
+#6 C:\laragon\www\ParaOJT\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', Array, Array)
+#7 C:\laragon\www\ParaOJT\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ParaOJT\app\Controllers\Auth.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ParaOJT\system\CodeIgniter.php(919): App\Controllers\Auth->register()
+#10 C:\laragon\www\ParaOJT\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\laragon\www\ParaOJT\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ParaOJT\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ParaOJT\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: YES) in C:\laragon\www\ParaOJT\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ParaOJT\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ParaOJT\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ParaOJT\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\laragon\www\ParaOJT\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ParaOJT\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', Array, NULL, 'username')
+#5 C:\laragon\www\ParaOJT\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', Array, Array)
+#6 C:\laragon\www\ParaOJT\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\laragon\www\ParaOJT\app\Controllers\Auth.php(24): CodeIgniter\Controller->validate(Array)
+#8 C:\laragon\www\ParaOJT\system\CodeIgniter.php(919): App\Controllers\Auth->register()
+#9 C:\laragon\www\ParaOJT\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\laragon\www\ParaOJT\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ParaOJT\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ParaOJT\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-02-03 07:38:24 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', [...], null, 'username')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Auth.php(24): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Auth->register()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ParaOJT\\public\\index.php')
+CRITICAL - 2024-02-03 07:53:10 --> syntax error, unexpected token "public", expecting end of file
+in APPPATH\Controllers\Auth.php on line 44.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\ParaOJT\\app\\Controllers\\Auth.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Auth')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Auth')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Auth', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ParaOJT\\public\\index.php')
