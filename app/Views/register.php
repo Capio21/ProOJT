@@ -94,7 +94,7 @@
                     
                 </ul>
             </nav>
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-9 px-4 animated bounce">
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-9 px-4 animated bounce" style="margin-right:110px;">
                 <h1 class="page-header">Registration</h1>
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><i class="bi bi-house-door"></i>&nbsp;Home</li>
@@ -165,6 +165,7 @@
             </main>
         </div>
     </div>
+    
 
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">

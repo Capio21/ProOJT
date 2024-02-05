@@ -93,15 +93,17 @@
                 </ul>
             </nav>
 
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-9 px-4 animated bounce" style="margin-right:110px;">
+             <main role="main" class="col-md-9 ml-sm-auto col-lg-9 px-4 animated bounce" style="margin-right:110px;">
                 <h1 class="page-header">Dashboard</h1>
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><i class="bi bi-house-door"></i>&nbsp;Home</li>
                     <li class="breadcrumb-item"><a href="#"><i class="bi bi-list"></i>Dashboard</a></li>
                 </ul>
                 <div class="container mt-5">
-                    
-                    
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                          
+                    </div>
                 </div>
             </main>
         </div>

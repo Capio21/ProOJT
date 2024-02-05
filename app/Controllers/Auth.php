@@ -34,6 +34,7 @@ class Auth extends BaseController
             } else {
                 $data['validation'] = $this->validator;
             }
+            
         }
 
         return view('register', $data);
