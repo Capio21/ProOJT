@@ -10,6 +10,7 @@
     <style>
         body {
             padding-top: 80px;
+            
         }
 
         #sidebar {
@@ -40,7 +41,7 @@
         }
 
         .tmargin {
-            margin-top: 15px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -73,28 +74,24 @@
                 </div>
 
                 <ul class="nav flex-column side-bar">
-
                     <li class="nav-item side-bar tmargin"><a class="nav-link" href="/admin"><i
                                 class="bi bi-house"></i>&nbsp;Dashboard</a></li>
                     <li class="nav-item side-bar"><a class="nav-link" href="/member"><i
-                                class="bi bi-flag"></i>&nbsp; Member Master List </a></li>
+                                class="bi bi-flag"></i>&nbsp;Member Master List </a></li>
                     <li class="nav-item side-bar"><a class="nav-link" href="#"><i
                                 class="bi bi-star"></i>&nbsp;Add Product</a></li>
                     <li class="nav-item side-bar"><a class="nav-link" href="#"><i
                                 class="bi bi-person-circle"></i>&nbsp;Add Events</a></li>
                     <li class="nav-item side-bar"><a class="nav-link" href="register"><i
-                                class="bi bi-person-check"></i>&nbsp;Register a User/Member</a></li>           
-
+                                class="bi bi-person-check"></i>&nbsp;Register a User/Member</a></li>
                     <li class="nav-item side-bar"><a class="nav-link" href="#"><i
                                 class="bi bi-gear"></i>&nbsp;Settings</a></li>
-                    
-                </ul>
-                    <!-- ... other menu items ... -->
                 </ul>
             </nav>
 
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-9 px-4 animated bounce">
-                <h1 class="page-header">Dashboard</h1>
+        
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-9 px-4 animated bounce" style="margin-right:110px;">
+                <h1 class="page-header">Master List</h1>
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><i class="bi bi-house-door"></i>&nbsp;Home</li>
                     <li class="breadcrumb-item"><a href="#"><i class="bi bi-list"></i>Dashboard</a></li>
@@ -102,70 +99,68 @@
 
                 <h2>Member List</h2>
 
-<table border="1">
-    <thead>
-        <tr>
-        <th>ID</th>
-<th>Username</th>
-<th>Email</th>
-<th>Full Name</th>
-<th>Address</th>
-<th>Contact Number</th>
-<th>Date of Birth</th>
-<th>Gender</th>
-<th>Occupation</th>
-<th>Membership Type</th>
-<th>Date Joined</th>
-<th>Actions</th>
-            <!-- Add other fields as needed -->
-        </tr>
-    </thead>
-<!-- Assuming $members is an array of arrays -->
-<?php foreach ($members as $member): ?>
-<tr>
-    <td><?= $member['id'] ?></td>
-    <td><?= $member['username'] ?></td>
-    <td><?= $member['email'] ?></td>
-    <td><?= $member['full_name'] ?></td>
-    <td><?= $member['address'] ?></td>
-    <td><?= $member['contact_number'] ?></td>
-    <td><?= $member['date_of_birth'] ?></td>
-    <td><?= $member['gender'] ?></td>
-    <td><?= $member['occupation'] ?></td>
-    <td><?= $member['membership_type'] ?></td>
-    <td><?= $member['date_joined'] ?></td>
-    <!-- Add other fields as needed -->
-    <td><a href="/members/edit/<?= $member['id'] ?>">Edit</a></td>
-</tr>
-<?php endforeach; ?>
-
-</tr>
-
-               
-    <!-- Logout Modal -->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="logoutModalLabel">Logout Confirmation</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Full Name</th>
+                            <th>Address</th>
+                            <th>Contact Number</th>
+                            <th>Date of Birth</th>
+                            <th>Gender</th>
+                            <th>Occupation</th>
+                            <th>Membership Type</th>
+                            <th>Date Joined</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <!-- Assuming $members is an array of arrays -->
+                    <?php foreach ($members as $member): ?>
+                    <tr>
+                        <td><?= $member['id'] ?></td>
+                        <td><?= $member['username'] ?></td>
+                        <td><?= $member['email'] ?></td>
+                        <td><?= $member['full_name'] ?></td>
+                        <td><?= $member['address'] ?></td>
+                        <td><?= $member['contact_number'] ?></td>
+                        <td><?= $member['date_of_birth'] ?></td>
+                        <td><?= $member['gender'] ?></td>
+                        <td><?= $member['occupation'] ?></td>
+                        <td><?= $member['membership_type'] ?></td>
+                        <td><?= $member['date_joined'] ?></td>
+                        <!-- Add other fields as needed -->
+                        <td><a href="/members/edit/<?= $member['id'] ?>" class="btn btn-primary btn-sm">Edit</a></td>
+                    </tr>
+                    <?php endforeach; ?>
+                </table>
+                
+                <!-- Logout Modal -->
+                <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="logoutModalLabel">Logout Confirmation</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Are you sure you want to logout?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <a href="/" class="btn btn-primary">Logout</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <p>Are you sure you want to logout?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <a href="/" class="btn btn-primary">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

@@ -112,8 +112,10 @@
 }
 
 .image-section img {
-    max-width: 200%; /* Make the image responsive */
+    width: 500px; /* Make the image responsive */
     height: auto;
+    margin-left:50px;
+
 }
 body {
             font-family: 'Times New Roman', Times, serif;
@@ -201,7 +203,7 @@ body {
        
             <div class="icon">
         
-                <h2 class="logo">MUCOFACO.</h2>
+                <h2 style="margin-top:50px;" class="logo">MUCOFACO.</h2>
             </div>
 
             

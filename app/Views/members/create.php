@@ -297,8 +297,10 @@
 }
 
 .image-section img {
-    max-width: 100%; /* Make the image responsive */
+    width: 500px; /* Make the image responsive */
     height: auto;
+    margin-left:50px;
+
 }
 
 
@@ -308,9 +310,10 @@
 
     <div class="main">
         <div class="navbar">
-            <div class="icon">
-                <h2 class="logo">MUCOFACO.</h2>
-            </div>
+        <div class="icon">
+        
+        <h2 style="margin-top:50px;" class="logo">MUCOFACO.</h2>
+    </div>
 
             
         </div> 
