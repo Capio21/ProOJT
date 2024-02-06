@@ -1,385 +1,139 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Webpage Design</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Member</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        .main {
-            width: 100%;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url(1.jpg);
-            background-position: center;
-            background-size: cover;
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background: #808080; /* Granite */
+            color: #FFA500; /* Orange */
             height: 100vh;
-        }
-
-        .navbar {
-            width: 1200px;
-            height: 75px;
-            margin: auto;
-        }
-
-        .icon {
-            width: 200px;
-            float: left;
-            height: 70px;
-        }
-
-        .logo {
-            color: #ff7200;
-            font-size: 35px;
-            font-family: Arial;
-            padding-left: 20px;
-            float: left;
-            padding-top: 10px;
-            margin-top: 5px
-        }
-
-        .menu {
-            width: auto;
-            float: none;
+            margin: 0;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
         }
 
-        ul {
-            float: none;
+        #login-container {
+            background: white;
+            padding: 20px; /* Reduced padding */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 400px; /* Reduced width */
+            text-align: left; /* Align text to the left */
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column; /* Arrange elements vertically */
+            align-items: flex-start; /* Align items to the start (left) */
+            overflow: auto; /* Add overflow for scrolling */
         }
 
-        ul li {
-            list-style: none;
-            margin-left: 20px; /* Adjusted margin for better spacing */
-            margin-top: 27px;
-            font-size: 14px;
+        h2 {
+            font-size: 20px; /* Reduced font size */
+            color: #FFA500; /* Orange */
+            margin-bottom: 15px; /* Reduced margin */
         }
 
-        ul li a {
-            text-decoration: none;
-            color: #fff;
-            font-family: Arial;
-            font-weight: bold;
-            transition: 0.4s ease-in-out;
+        label {
+            display: block;
+            margin-bottom: 10px; /* Reduced margin */
+            font-size: 14px; /* Reduced font size */
+            width: 100%; /* Take up full width */
         }
 
-        ul li a:hover {
-            color: #ff7200;
+        input, select {
+            width: calc(100% - 10px); /* Full width with some spacing */
+            padding: 10px; /* Reduced padding */
+            margin-bottom: 10px; /* Reduced margin */
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 12px; /* Reduced font size */
+            display: inline-block;
         }
 
-        .search {
-            width: 330px;
-            float: left;
-            margin-left: 270px;
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 10px; /* Reduced margin */
         }
 
-        .srch {
-            font-family: 'Times New Roman';
-            width: 200px;
-            height: 40px;
-            background: transparent;
-            border: 1px solid #ff7200;
-            margin-top: 13px;
-            color: #fff;
-            border-right: none;
-            font-size: 16px;
-            float: left;
-            padding: 10px;
-            border-bottom-left-radius: 5px;
-            border-top-left-radius: 5px;
-        }
-
-        .btn {
-            width: 100px;
-            height: 40px;
-            background: #ff7200;
-            border: 2px solid #ff7200;
-            margin-top: 13px;
-            color: #fff;
-            font-size: 15px;
-            border-bottom-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-            transition: 0.2s ease;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            color: #000;
-        }
-
-        .btn:focus {
-            outline: none;
-        }
-
-        .srch:focus {
-            outline: none;
-        }
-
-        .content {
-            width: 1200px;
-            height: auto;
-            margin: auto;
-            color: #fff;
-            position: relative;
-        }
-
-        .content .par {
-            padding-left: 20px;
-            padding-bottom: 25px;
-            font-family: Arial;
-            letter-spacing: 1.2px;
-            line-height: 30px;
-        }
-
-        .content h1 {
-            font-family: 'Times New Roman';
-            font-size: 50px;
-            padding-left: 20px;
-            margin-top: 9%;
-            letter-spacing: 2px;
-        }
-
-        .content .cn {
-            width: 160px;
-            height: 40px;
-            background: #ff7200;
+        button {
+            background-color: #808080; /* Granite */
+            color: #FFA500; /* Orange */
+            padding: 10px 15px; /* Reduced padding */
             border: none;
-            margin-bottom: 10px;
-            margin-left: 20px;
-            font-size: 18px;
-            border-radius: 10px;
+            border-radius: 8px;
             cursor: pointer;
-            transition: .4s ease;
+            font-size: 14px; /* Reduced font size */
+            width: 100%; /* Full width */
+            margin-top: 10px; /* Reduced margin */
         }
 
-        .content .cn a {
-            text-decoration: none;
-            color: #000;
-            transition: .3s ease;
+        button:hover {
+            background-color: #595959; /* Darker Granite */
         }
 
-        .cn:hover {
-            background-color: #fff;
+        #signup-link {
+            margin-top: 10px; /* Reduced margin */
+            font-size: 14px; /* Reduced font size */
+            text-align: center; /* Center align the link */
         }
-
-        .content span {
-            color: #ff7200;
-            font-size: 65px
-        }
-
-        .form {
-            width: 250px;
-            height: 380px;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.8) 50%);
-            position: absolute;
-            top: -20px;
-            left: 870px;
-            transform: translate(0%, -5%);
-            border-radius: 10px;
-            padding: 25px;
-        }
-
-        .form h2 {
-            width: 220px;
-            font-family: sans-serif;
-            text-align: center;
-            color: #ff7200;
-            font-size: 22px;
-            background-color: #fff;
-            border-radius: 10px;
-            margin: 2px;
-            padding: 8px;
-        }
-
-        .form input {
-            width: 240px;
-            height: 35px;
-            background: transparent;
-            border-bottom: 1px solid #ff7200;
-            border-top: none;
-            border-right: none;
-            border-left: none;
-            color: #fff;
-            font-size: 15px;
-            letter-spacing: 1px;
-            margin-top: 30px;
-            font-family: sans-serif;
-        }
-
-        .form input:focus {
-            outline: none;
-        }
-
-        ::placeholder {
-            color: #fff;
-            font-family: Arial;
-        }
-
-        .btnn {
-            width: 240px;
-            height: 40px;
-            background: #ff7200;
-            border: none;
-            margin-top: 30px;
-            font-size: 18px;
-            border-radius: 10px;
-            cursor: pointer;
-            color: #fff;
-            transition: 0.4s ease;
-        }
-
-        .btnn:hover {
-            background: #fff;
-            color: #ff7200;
-        }
-
-        .btnn a {
-            text-decoration: none;
-            color: #000;
-            font-weight: bold;
-        }
-
-        .form .link {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 17px;
-            padding-top: 20px;
-            text-align: center;
-        }
-
-        .form .link a {
-            text-decoration: none;
-            color: #ff7200;
-        }
-
-        .liw {
-            padding-top: 15px;
-            padding-bottom: 10px;
-            text-align: center;
-        }
-
-        .icons a {
-            text-decoration: none;
-            color: #fff;
-        }
-
-        .icons ion-icon {
-            color: #fff;
-            font-size: 30px;
-            padding-left: 14px;
-            padding-top: 5px;
-            transition: 0.3s ease;
-        }
-
-        .icons ion-icon:hover {
-            color: #ff7200;
-        }
-        .content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.text-section {
-    flex: 1;
-    padding-right: 20px; /* Adjust the spacing between text and image */
-}
-
-.image-section {
-    flex-shrink: 0; /* Prevent the image from shrinking */
-}
-
-.image-section img {
-    width: 500px; /* Make the image responsive */
-    height: auto;
-    margin-left:50px;
-
-}
-
-
     </style>
 </head>
 <body>
-
-    <div class="main">
-        <div class="navbar">
-        <div class="icon">
-        
-        <h2 style="margin-top:50px;" class="logo">MUCOFACO.</h2>
-    </div>
-
-            
-        </div> 
-        <div class="content">
+    <div id="login-container">
         <h2>Add Member</h2>
 
-<?= form_open('/members/store') ?>
-<label for="username">Username:</label>
-<input type="text" name="username" required>
-<br>
+        <?= form_open('/members/store') ?>
+        <label for="username">Username:</label>
+        <input type="text" name="username" required>
 
-<label for="email">Email:</label>
-<input type="email" name="email" required>
-<br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
 
-<label for="password">Password:</label>
-<input type="password" name="password" required>
-<br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
 
-<label for="full_name">Full Name:</label>
-<input type="text" name="full_name" required>
-<br>
+        <label for="full_name">Full Name:</label>
+        <input type="text" name="full_name" required>
 
-<label for="address">Address:</label>
-<input type="text" name="address" required>
-<br>
+        <label for="address">Address:</label>
+        <input type="text" name="address" required>
 
-<label for="contact_number">Contact Number:</label>
-<input type="text" name="contact_number" required>
-<br>
+        <div class="form-row">
+            <label for="contact_number">Contact Number:</label>
+            <input type="text" name="contact_number" required>
 
-<label for="date_of_birth">Date of Birth:</label>
-<input type="date" name="date_of_birth" required>
-<br>
+            <label for="date_of_birth">Date of Birth:</label>
+            <input type="date" name="date_of_birth" required>
+        </div>
 
-<label for="gender">Gender:</label>
-<select name="gender" required>
-    <option value="male">Male</option>
-    <option value="female">Female</option>
-</select>
-<br>
+        <div class="form-row">
+            <label for="gender">Gender:</label>
+            <select name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
 
-<label for="occupation">Occupation:</label>
-<input type="text" name="occupation" required>
-<br>
+            <label for="occupation">Occupation:</label>
+            <input type="text" name="occupation" required>
+        </div>
 
-<label for="membership_type">Membership Type:</label>
-<input type="text" name="membership_type" required>
-<br>
+        <div class="form-row">
+            <label for="date_joined">Date Joined:</label>
+            <input type="date" name="date_joined" required>
 
-<label for="date_joined">Date Joined:</label>
-<input type="date" name="date_joined" required>
-<br>
+            <label for="membership_type">Membership Type:</label>
+            <input type="text" name="membership_type" required>
+        </div>
 
-<button type="submit">Submit in the Admin</button>
-<?= form_close() ?>
+        <button type="submit">Submit in the Admin</button>
+        <?= form_close() ?>
 
-
-<a href="/login">Back</a>
-    
-    <div class="image-section">
-        <img src="../../coconut.png">
+        <a href="/login" id="signup-link" style="margin-top: 10px; text-align: center;">Back</a>
     </div>
-</div>
-
-    </div>
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 </html>
