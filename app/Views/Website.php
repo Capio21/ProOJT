@@ -326,7 +326,7 @@
         <h1>MOCUFACO& <br><span>PLANTING </span> <br>WORKSHOP</h1>
         <p class="par">Join us for an enlightening workshop on farming and the coconut industry, where we explore the fascinating journey of transforming coconuts into diverse and valuable products. Discover the secrets of cultivating this versatile crop and the art of turning its bounty into an array of useful items.</p>
 
-<p class="par">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt neque expedita atque eveniet quis nesciunt. Quos nulla vero consequuntur, fugit nemo ad delectus a quae totam ipsa illum minus laudantium?</p>
+
 
 
         <button class="cn"><a href="/login">BE A MEMBER </a></button>

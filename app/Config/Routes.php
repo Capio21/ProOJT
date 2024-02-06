@@ -9,7 +9,7 @@ $routes->get('/Landing', 'Home::Landing');
 $routes->get('/admin', 'Home::admin');
 $routes->get('/', 'Home::Website');
 $routes->get('/Success', 'Home::Success');
-
+$routes->get('/Shop', 'Home::Shop');
 
 //login
 $routes->get('register', 'Auth::register');

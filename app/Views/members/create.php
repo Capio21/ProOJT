@@ -16,6 +16,7 @@
             justify-content: center;
         }
 
+<<<<<<< Updated upstream
         #login-container {
             background: white;
             padding: 20px; /* Reduced padding */
@@ -74,6 +75,33 @@
 
         button:hover {
             background-color: #595959; /* Darker Granite */
+=======
+     
+
+       
+
+     
+
+        .btn:hover {
+            color: #000;
+        }
+
+       
+
+        .content {
+            width: 1200px;
+            height: auto;
+            margin: auto;
+            color: #fff;
+            position: relative;
+        }
+
+  
+        .content .cn a {
+            text-decoration: none;
+            color: #000;
+            transition: .3s ease;
+>>>>>>> Stashed changes
         }
 
         #signup-link {
@@ -81,6 +109,7 @@
             font-size: 14px; /* Reduced font size */
             text-align: center; /* Center align the link */
         }
+<<<<<<< Updated upstream
     </style>
 </head>
 <body>
@@ -90,6 +119,85 @@
         <?= form_open('/members/store') ?>
         <label for="username">Username:</label>
         <input type="text" name="username" required>
+=======
+
+        .content span {
+            color: #ff7200;
+            font-size: 65px
+        }
+
+        .form {
+            width: 250px;
+            height: 380px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.8) 50%);
+            position: absolute;
+            top: -20px;
+            left: 870px;
+            transform: translate(0%, -5%);
+            border-radius: 10px;
+            padding: 25px;
+        }
+
+        .form h2 {
+            width: 220px;
+            font-family: sans-serif;
+            text-align: center;
+            color: #ff7200;
+            font-size: 22px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin: 2px;
+            padding: 8px;
+        }
+
+
+        
+        .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-section {
+    flex: 1;
+    padding-right: 20px; /* Adjust the spacing between text and image */
+}
+
+.image-section {
+    flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+.image-section img {
+    width: 500px; /* Make the image responsive */
+    height: auto;
+    margin-left:50px;
+
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="navbar">
+        <div class="icon">
+        
+        <h2 style="margin-top:50px;" class="logo">MUCOFACO.</h2>
+    </div>
+
+            
+        </div> 
+        <div class="content">
+       
+
+<?= form_open('/members/store') ?>
+
+<h2>Add Member</h2>
+<label for="username">Username:</label>
+<input type="text" name="username" required>
+<br>
+>>>>>>> Stashed changes
 
         <label for="email">Email:</label>
         <input type="email" name="email" required>
@@ -130,10 +238,23 @@
             <input type="text" name="membership_type" required>
         </div>
 
+<<<<<<< Updated upstream
         <button type="submit">Submit in the Admin</button>
         <?= form_close() ?>
 
         <a href="/login" id="signup-link" style="margin-top: 10px; text-align: center;">Back</a>
+=======
+<button type="submit">Submit in the Admin</button>
+
+<a href="/login">Back</a>
+<?= form_close() ?>
+
+
+
+    
+    <div class="image-section">
+        <img src="../../coconut.png">
+>>>>>>> Stashed changes
     </div>
 </body>
 </html>

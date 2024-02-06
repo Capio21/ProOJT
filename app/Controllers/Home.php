@@ -23,4 +23,8 @@ class Home extends BaseController
     {
         return view('Success');
     }
+    public function Shop(): string
+    {
+        return view('Shop');
+    }
 }
