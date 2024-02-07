@@ -7,6 +7,12 @@ use App\Controllers\BaseController;
 
 class Auth extends BaseController
 {
+    public function getUser(){
+        $userModel = new UserModel();
+        $data = $userModel->findAll(200,);
+        return $data;
+    }
+    
     public function register()
     {
         $data = [];
